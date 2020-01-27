@@ -1,0 +1,19 @@
+{
+  "name": "wikipedia-scraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "argparse": "^1.0.10",
+    "cheerio": "^1.0.0-rc.3",
+    "csv-writer": "^1.6.0",
+    "figlet": "^1.2.4",
+    "request-promise": "^4.2.5"
+  }
+}
