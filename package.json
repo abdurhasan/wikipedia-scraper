@@ -1,13 +1,16 @@
 {
   "name": "wikipedia-scraper",
   "version": "1.0.0",
-  "description": "",
+  "description": " Wikipedia Scraper Tools . Data Engineer ONM Online Test",
   "main": "index.js",
+  "preferGlobal": true,
+  "bin": {
+    "wikipedia-scraper": "./index.js"
+  },
   "scripts": {
     "start": "node index"
   },
-  "keywords": [],
-  "author": "",
+  "author": "@abdurhasan",
   "license": "ISC",
   "dependencies": {
     "argparse": "^1.0.10",

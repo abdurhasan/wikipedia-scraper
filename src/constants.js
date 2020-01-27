@@ -6,14 +6,15 @@ const WIKIPEDIA_BASE_URL = 'https://en.wikipedia.org'
 const WIKIPEDIA_LIMIT_MAX = 591
 const WIKIPEDIA_WORDS_MAX = 100
 const WIKIPEDIA_CSV_HEADER = [
-    { id: 'id', title: 'ID' },
-    { id: 'title', title: 'Title' },
-    { id: 'content', title: 'Content' },
-    { id: 'url', title: 'Url' }
+    
+    { id: 'title', title: 'TITLE' },
+    { id: 'url', title: 'URL' },
+    { id: 'content', title: 'CONTENT' },
+    
 
 ]
 
-const PATH_CSV_FILE = path.resolve(__dirname, `./files/wikipedia-scraping-${Date.now()}.csv`)
+const PATH_CSV_FILE = path.resolve(__dirname, `../files/wikipedia-scraping-${Date.now()}.csv`)
 
 
 const WIKIPEDIA_TARGET_URL = ({ limit, offset, search }) => {

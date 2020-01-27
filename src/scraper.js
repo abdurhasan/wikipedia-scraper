@@ -21,8 +21,7 @@ const WikipediaScraper = ({ limit, search, offset }) => {
 
                 $('.mw-search-result').each(function (index, el) {
 
-                    result.push({
-                        'id': index + 1,
+                    result.push({                        
                         'title': $(el).children('.mw-search-result-heading').text(),
                         'url': WIKIPEDIA_BASE_URL + $(el).children('.mw-search-result-heading').children('a').attr('href'),
                         'content': filterContent({
