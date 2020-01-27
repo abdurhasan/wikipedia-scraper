@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 const Path = require('path')
-
-const { PATH_CSV_FILE, WIKIPEDIA_LIMIT_MAX, BLUE_COLOR, RESET_COLOR, YELLOW_COLOR } = require('./src/constants')
-const { banner, WriteCSVFile, parse_args ,parse_sucess } = require('./src/utils')
-const { WikipediaScraper } = require('./src/scraper')
+const rootModule = Path.resolve(__dirname, '../');
+const { PATH_CSV_FILE, WIKIPEDIA_LIMIT_MAX, BLUE_COLOR, RESET_COLOR, YELLOW_COLOR } = require(rootModule + '/src/constants')
+const { banner, WriteCSVFile, parse_args } = require(rootModule + '/src/utils')
+const { WikipediaScraper } = require(rootModule + '/src/scraper')
 
 const cluster = require('cluster')
 
@@ -46,9 +46,10 @@ if (cluster.isMaster) {
             if (_data.length == args.limit) {
                 WriteCSVFile({ path: output, records: _data })
                     .then(snap => {
-                        parse_sucess(snap)
+                        console.log(`${BLUE_COLOR} ${snap} .\n ${RESET_COLOR} Look at your File : ${YELLOW_COLOR} ${output} \n`)
                         process.exit()
                     })
+
             }
         });
 
