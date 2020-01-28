@@ -15,7 +15,12 @@ Wikipedia scraper Data Engineer ONM Online Test
 $ npm install -g wikipedia-scraper
 
 $ example :   
-wikipedia-scraper --search jakarta --limit 1185 --output=./fileshasan.csv
+
+node index.js--search jakarta --limit 1185 --output=./fileshasan.csv  // Local
+
+or
+
+wikipedia-scraper --search jakarta --limit 1185 --output=./fileshasan.csv  // Global
     
     Optional arguments:
       -S, --search        Keyword for scraping
